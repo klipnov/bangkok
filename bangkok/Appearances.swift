@@ -15,8 +15,8 @@ class Appearances {
     static func navigationBar() {
         let navigationBarAppearance = UINavigationBar.appearance()
         
-        navigationBarAppearance.tintColor = UIColor.init(red: 17.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 1.0)
-        navigationBarAppearance.barTintColor = UIColor.init(red: 0, green: 0, blue: 0, alpha: 1)
+        navigationBarAppearance.barTintColor = UIColor.init(red: 17.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 1.0)
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
     
 }
