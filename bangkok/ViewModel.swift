@@ -15,7 +15,7 @@ class ViewModel {
     var didUpdateSurvey: (() -> Void)?
 
     init() {
-       getSurvey()
+        refreshSurvey()
     }
     
     /**

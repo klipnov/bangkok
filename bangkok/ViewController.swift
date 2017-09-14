@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ViewController: UIViewController {
 
@@ -19,6 +20,8 @@ class ViewController: UIViewController {
         viewModel.didUpdateSurvey = {
             self.tableView.reloadData()
         }
+        viewModel.refreshSurvey()
+        
     }
 }
 
@@ -33,6 +36,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell") as! CardTableViewCell
+        
+        let survey = viewModel.surveys[indexPath.row]
+        if let imageUrlString = survey.imageURL {
+            if let imageUrl = URL(string: imageUrlString) {
+                cell.backgroundImage.af_setImage(withURL: imageUrl)
+            }
+        }
+        
         return UITableViewCell()
     }
     
