@@ -18,6 +18,8 @@
 		E64241F51F6AA0C9008D5A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64241F31F6AA0C9008D5A21 /* LaunchScreen.storyboard */; };
 		E64242001F6AA0C9008D5A21 /* bangkokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64241FF1F6AA0C9008D5A21 /* bangkokTests.swift */; };
 		E642420B1F6AA0C9008D5A21 /* bangkokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */; };
+		E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */; };
+		E6EDD36C1F6AB05F00D99745 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		E64242061F6AA0C9008D5A21 /* bangkokUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bangkokUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bangkokUITests.swift; sourceTree = "<group>"; };
 		E642420C1F6AA0C9008D5A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokNetwork.swift; sourceTree = "<group>"; };
+		E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 		E642421A1F6AA1C5008D5A21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 		E642421B1F6AA1E9008D5A21 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -484,8 +490,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6EDD36C1F6AB05F00D99745 /* ViewModel.swift in Sources */,
 				E64241EA1F6AA0C9008D5A21 /* ViewController.swift in Sources */,
 				E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */,
+				E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */,
 				E64241E81F6AA0C9008D5A21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
