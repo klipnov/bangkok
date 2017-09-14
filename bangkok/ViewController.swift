@@ -50,7 +50,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         if let imageUrlString = survey.imageURL {
             if let imageUrl = URL(string: imageUrlString) {
-                cell.backgroundImage.af_setImage(withURL: imageUrl)
+                cell.backgroundImage.af_setImage(withURL: imageUrl, placeholderImage: #imageLiteral(resourceName: "placeholder"), filter: nil, progress: nil, imageTransition: UIImageView.ImageTransition.crossDissolve(0.3), runImageTransitionIfCached: false, completion: nil)
             }
         }
         
