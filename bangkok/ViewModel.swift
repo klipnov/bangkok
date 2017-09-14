@@ -52,7 +52,7 @@ class ViewModel {
             let survey = Survey(entity: Survey.entity(), insertInto: context)
             
             survey.title = json["title"].string
-            survey.imageURL = json["cover_image_url"].string
+            survey.imageURL = json["cover_image_url"].string?.appending("l")
             survey.surveyDescription = json["description"].string
             
             surveys.append(survey)

@@ -20,8 +20,6 @@ class ViewController: UIViewController {
         viewModel.didUpdateSurvey = {
             self.tableView.reloadData()
         }
-        viewModel.refreshSurvey()
-        
     }
 }
 
@@ -33,6 +31,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.surveys.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

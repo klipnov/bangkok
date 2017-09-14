@@ -12,6 +12,9 @@ class CardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var button: UIButton!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

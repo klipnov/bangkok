@@ -13,7 +13,7 @@
         <!--SURVEYS-->
         <scene sceneID="4DS-Cy-MHv">
             <objects>
-                <viewController id="GIR-l9-hMT" customClass="ViewController" customModule="bangkok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GIR-l9-hMT" customClass="ViewController" customModule="bangkok" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AIR-Dy-ISn"/>
                         <viewControllerLayoutGuide type="bottom" id="sc4-eW-5k4"/>
@@ -22,8 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="579" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7IP-lK-KPS">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="579" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7IP-lK-KPS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CardCell" rowHeight="579" id="us7-Ix-buI" customClass="CardTableViewCell" customModule="bangkok" customModuleProvider="target">
@@ -42,6 +42,22 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-ns-jqX">
+                                                    <rect key="frame" x="143" y="52" width="88" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-RJ-AD0">
+                                                    <rect key="frame" x="145" y="504" width="84" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal" title="Take Survey"/>
+                                                    <connections>
+                                                        <segue destination="xhy-m1-Jnc" kind="show" id="Di1-Cf-Srl"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2NN-yF-Ss7" firstAttribute="centerX" secondItem="7n0-Cz-poU" secondAttribute="centerX" id="QKs-aD-ULN"/>
@@ -54,6 +70,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="backgroundImage" destination="im6-Oq-Yn1" id="9Mh-R4-VyX"/>
+                                            <outlet property="button" destination="Dwj-RJ-AD0" id="PPx-bs-zTw"/>
+                                            <outlet property="description" destination="cfw-ns-jqX" id="9kl-m8-Xx0"/>
+                                            <outlet property="descriptionLabel" destination="cfw-ns-jqX" id="ask-TE-m4D"/>
                                             <outlet property="title" destination="2NN-yF-Ss7" id="n9m-Q7-dZu"/>
                                         </connections>
                                     </tableViewCell>
@@ -66,8 +85,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="7IP-lK-KPS" firstAttribute="top" secondItem="nRX-zd-fy8" secondAttribute="top" id="CEi-mQ-Xel"/>
                             <constraint firstAttribute="trailing" secondItem="7IP-lK-KPS" secondAttribute="trailing" id="LQa-Gy-Hj0"/>
+                            <constraint firstItem="7IP-lK-KPS" firstAttribute="top" secondItem="AIR-Dy-ISn" secondAttribute="bottom" id="a63-q8-YiC"/>
                             <constraint firstItem="7IP-lK-KPS" firstAttribute="leading" secondItem="nRX-zd-fy8" secondAttribute="leading" id="r3s-fN-Ta8"/>
                             <constraint firstItem="sc4-eW-5k4" firstAttribute="top" secondItem="7IP-lK-KPS" secondAttribute="bottom" id="xJr-Ep-P9k"/>
                         </constraints>
@@ -82,7 +101,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7IP-lK-KPS" id="bdQ-CC-lcD"/>
-                        <segue destination="xhy-m1-Jnc" kind="show" id="fYj-Hg-B2n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlS-35-MqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
