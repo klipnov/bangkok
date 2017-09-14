@@ -37,21 +37,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="579"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NN-yF-Ss7">
-                                                    <rect key="frame" x="156" y="8" width="63" height="36"/>
+                                                    <rect key="frame" x="156" y="108" width="63" height="36"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-ns-jqX">
-                                                    <rect key="frame" x="143" y="52" width="88" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfw-ns-jqX">
+                                                    <rect key="frame" x="143" y="152" width="88" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-RJ-AD0">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-RJ-AD0">
                                                     <rect key="frame" x="145" y="504" width="84" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <state key="normal" title="Take Survey"/>
                                                     <connections>
@@ -61,17 +59,20 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2NN-yF-Ss7" firstAttribute="centerX" secondItem="7n0-Cz-poU" secondAttribute="centerX" id="QKs-aD-ULN"/>
+                                                <constraint firstItem="Dwj-RJ-AD0" firstAttribute="centerX" secondItem="7n0-Cz-poU" secondAttribute="centerX" id="UiY-qU-rde"/>
                                                 <constraint firstAttribute="bottom" secondItem="im6-Oq-Yn1" secondAttribute="bottom" constant="-0.5" id="XFJ-QP-0OA"/>
                                                 <constraint firstItem="im6-Oq-Yn1" firstAttribute="leading" secondItem="7n0-Cz-poU" secondAttribute="leading" id="XXf-YY-3Mx"/>
                                                 <constraint firstItem="im6-Oq-Yn1" firstAttribute="top" secondItem="7n0-Cz-poU" secondAttribute="top" id="cY3-Ja-GaX"/>
+                                                <constraint firstItem="cfw-ns-jqX" firstAttribute="top" secondItem="2NN-yF-Ss7" secondAttribute="bottom" constant="8" id="fWo-fz-Ufm"/>
                                                 <constraint firstAttribute="trailing" secondItem="im6-Oq-Yn1" secondAttribute="trailing" id="q2t-aw-CwI"/>
-                                                <constraint firstItem="2NN-yF-Ss7" firstAttribute="top" secondItem="7n0-Cz-poU" secondAttribute="topMargin" id="rE4-XL-7rG"/>
+                                                <constraint firstItem="2NN-yF-Ss7" firstAttribute="top" secondItem="7n0-Cz-poU" secondAttribute="topMargin" constant="100" id="rE4-XL-7rG"/>
+                                                <constraint firstAttribute="bottom" secondItem="Dwj-RJ-AD0" secondAttribute="bottom" constant="44.5" id="wC4-0b-Yog"/>
+                                                <constraint firstItem="cfw-ns-jqX" firstAttribute="centerX" secondItem="7n0-Cz-poU" secondAttribute="centerX" id="xsi-CZ-sfv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="backgroundImage" destination="im6-Oq-Yn1" id="9Mh-R4-VyX"/>
                                             <outlet property="button" destination="Dwj-RJ-AD0" id="PPx-bs-zTw"/>
-                                            <outlet property="description" destination="cfw-ns-jqX" id="9kl-m8-Xx0"/>
                                             <outlet property="descriptionLabel" destination="cfw-ns-jqX" id="ask-TE-m4D"/>
                                             <outlet property="title" destination="2NN-yF-Ss7" id="n9m-Q7-dZu"/>
                                         </connections>

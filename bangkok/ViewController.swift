@@ -43,6 +43,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let survey = viewModel.surveys[indexPath.row]
         
         cell.title.text = survey.title
+        cell.descriptionLabel.text = survey.surveyDescription
         
         if let imageUrlString = survey.imageURL {
             if let imageUrl = URL(string: imageUrlString) {
