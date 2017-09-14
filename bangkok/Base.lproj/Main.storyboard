@@ -12,7 +12,7 @@
         <!--SURVEYS-->
         <scene sceneID="4DS-Cy-MHv">
             <objects>
-                <viewController id="GIR-l9-hMT" sceneMemberID="viewController">
+                <viewController id="GIR-l9-hMT" customClass="ViewController" customModule="bangkok" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AIR-Dy-ISn"/>
                         <viewControllerLayoutGuide type="bottom" id="sc4-eW-5k4"/>
@@ -24,6 +24,10 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7IP-lK-KPS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GIR-l9-hMT" id="Y9z-T3-H0o"/>
+                                    <outlet property="delegate" destination="GIR-l9-hMT" id="ucz-RJ-Og8"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,6 +42,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" id="wPM-W7-UZN"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="lFR-Ph-hdh"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="7IP-lK-KPS" id="bdQ-CC-lcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlS-35-MqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
