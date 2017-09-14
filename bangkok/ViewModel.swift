@@ -30,7 +30,7 @@ class ViewModel {
             }
             self.processSurvey(json: json)
         }
-    }
+    } 
     
     /**
      Clears the surveys and re-download again
