@@ -21,10 +21,8 @@ class ViewModel {
     /**
      Returns an array of surveys
     */
-    func getSurvey() {
-        let bangkokNetwork = BangkokNetwork()
-        
-        bangkokNetwork.getSurveyJSON { (json) in
+    func getSurvey() {        
+        BangkokNetwork.getSurveyJSON { (json) in
             guard let json = json else {
                 return
             }

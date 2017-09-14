@@ -24,6 +24,7 @@
 		E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */; };
 		E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */; };
 		E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */; };
+		E6EDD37B1F6AF64900D99745 /* Appearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37A1F6AF64900D99745 /* Appearances.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		E6EDD37A1F6AF64900D99745 /* Appearances.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearances.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		E64241E61F6AA0C9008D5A21 /* bangkok */ = {
 			isa = PBXGroup;
 			children = (
+				E6EDD3791F6AF58800D99745 /* Appearance */,
 				E6EDD3701F6ACF8C00D99745 /* Extensions */,
 				E6EDD36D1F6ABFEC00D99745 /* Protocols */,
 				E642421B1F6AA1E9008D5A21 /* Networking */,
@@ -230,6 +233,14 @@
 				E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */,
 			);
 			name = TableViewCells;
+			sourceTree = "<group>";
+		};
+		E6EDD3791F6AF58800D99745 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDD37A1F6AF64900D99745 /* Appearances.swift */,
+			);
+			name = Appearance;
 			sourceTree = "<group>";
 		};
 		F510692BD763547CF6BE39CB /* Frameworks */ = {
@@ -529,6 +540,7 @@
 				E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */,
 				E6EDD36C1F6AB05F00D99745 /* ViewModel.swift in Sources */,
 				E64241EA1F6AA0C9008D5A21 /* ViewController.swift in Sources */,
+				E6EDD37B1F6AF64900D99745 /* Appearances.swift in Sources */,
 				E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */,
 				E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */,
 				E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */,
