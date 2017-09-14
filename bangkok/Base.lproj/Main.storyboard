@@ -44,11 +44,31 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7IP-lK-KPS" id="bdQ-CC-lcD"/>
+                        <segue destination="xhy-m1-Jnc" kind="show" id="fYj-Hg-B2n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlS-35-MqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744.8" y="745.27736131934034"/>
+        </scene>
+        <!--SurveyName-->
+        <scene sceneID="HhQ-L0-WD4">
+            <objects>
+                <viewController id="xhy-m1-Jnc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sDd-oU-TKT"/>
+                        <viewControllerLayoutGuide type="bottom" id="2my-vO-bAu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4AE-7p-IJV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SurveyName" id="UJD-Zh-J65"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QT-LC-bT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2444" y="745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sFl-jg-391">
