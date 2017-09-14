@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let viewModel = ViewModel()
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var pageControl: BangkokPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,4 +68,13 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+}
+
+// MARK: - ScrollView Delegate
+
+extension ViewController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.y / scrollView.frame.size.height)
+        pageControl.currentPage = Int(pageNumber)
+    }
 }

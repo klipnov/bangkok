@@ -9,8 +9,8 @@
 import UIKit
 
 class BangkokPageControl: UIPageControl {
-    let currentCircle: UIImage = #imageLiteral(resourceName: "dotInsideCircle")
-    let otherCircles: UIImage = #imageLiteral(resourceName: "circle")
+    let activeImage:UIImage = #imageLiteral(resourceName: "dotInsideCircle")
+    let inactiveImage:UIImage = #imageLiteral(resourceName: "circle")
     
     override var numberOfPages: Int {
         didSet {
@@ -23,17 +23,9 @@ class BangkokPageControl: UIPageControl {
             updateDots()
         }
     }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupPageControl()
-    }
-    
-    func setupPageControl() {
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
         self.pageIndicatorTintColor = UIColor.clear
         self.currentPageIndicatorTintColor = UIColor.clear
         self.clipsToBounds = false
@@ -41,39 +33,45 @@ class BangkokPageControl: UIPageControl {
         let angle = CGFloat(Double.pi/2)
         self.transform = CGAffineTransform(rotationAngle: angle)
     }
-
     
     func updateDots() {
         var i = 0
         for (index,view) in self.subviews.enumerated() {
-            var imageView = self.imageView(forSubview: view)
-            if imageView == nil {
-                if i == 0 {
-                    imageView = UIImageView(image: currentCircle)
+            if let imageView = self.imageForSubview(view) {
+                if i == self.currentPage {
+                    imageView.image = self.activeImage
                 } else {
-                    imageView = UIImageView(image: otherCircles)
+                    imageView.image = self.inactiveImage
                 }
-                imageView!.center = view.center
-                
-                let frame = imageView!.frame
-                
-                imageView!.frame = CGRect(x: CGFloat(Int(frame.origin.x) + (10 * index)),
-                                          y: frame.origin.y,
-                                          width: frame.width, height: frame.height)
-                view.addSubview(imageView!)
-                view.clipsToBounds = false
-            }
-            if i == self.currentPage {
-                imageView!.alpha = 1.0
+                i = i + 1
             } else {
-                imageView!.alpha = 1.0
+                var dotImage = self.inactiveImage
+                if i == self.currentPage {
+                    dotImage = self.activeImage
+                }
+                view.clipsToBounds = false
+                let imageView = UIImageView(image: dotImage)
+                view.addSubview(imageView)
+                distanceViews(index: index, view:imageView)
+                i = i + 1
             }
-            i += 1
         }
     }
     
-    fileprivate func imageView(forSubview view: UIView) -> UIImageView? {
-        var dot: UIImageView?
+    func distanceViews(index:Int ,view: UIView) {
+            let frame = view.frame
+        
+            view.frame = CGRect(
+                x: CGFloat(Int(frame.origin.x) + (10 * index)),
+                y: frame.origin.y,
+                width: frame.width,
+                height: frame.height)
+    }
+    
+    
+    fileprivate func imageForSubview(_ view:UIView) -> UIImageView? {
+        var dot:UIImageView?
+        
         if let dotImageView = view as? UIImageView {
             dot = dotImageView
         } else {
@@ -84,7 +82,7 @@ class BangkokPageControl: UIPageControl {
                 }
             }
         }
+        
         return dot
     }
-
 }
