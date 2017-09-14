@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let viewModel = ViewModel()
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var pageControl: UIPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,19 @@ class ViewController: UIViewController {
         viewModel.didUpdateSurvey = {
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
+            self.pageControl.numberOfPages = self.viewModel.surveys.count
         }
     }
+    
+    @IBAction func didTapRefresh(_ sender: Any) {
+        self.activityIndicator.color = UIColor.white
+        self.activityIndicator.startAnimating()
+        viewModel.refreshSurvey()
+    }
+    
 }
+
+// MARK: - TableViewDelegate and Datasource
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     

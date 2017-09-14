@@ -59,7 +59,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="xhy-m1-Jnc" kind="show" id="Di1-Cf-Srl"/>
+                                                        <segue destination="xhy-m1-Jnc" kind="show" identifier="viewSurvey" id="Di1-Cf-Srl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -93,13 +93,18 @@
                                 <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ifh-gs-3pj" customClass="BangkokPageControl" customModule="bangkok" customModuleProvider="target">
+                                <rect key="frame" x="320" y="315" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HYh-hG-tG3" firstAttribute="centerY" secondItem="nRX-zd-fy8" secondAttribute="centerY" id="AJM-gN-so0"/>
                             <constraint firstAttribute="trailing" secondItem="7IP-lK-KPS" secondAttribute="trailing" id="LQa-Gy-Hj0"/>
                             <constraint firstItem="HYh-hG-tG3" firstAttribute="centerX" secondItem="nRX-zd-fy8" secondAttribute="centerX" id="N33-gp-JXS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ifh-gs-3pj" secondAttribute="trailing" id="XH1-3B-afx"/>
                             <constraint firstItem="7IP-lK-KPS" firstAttribute="top" secondItem="AIR-Dy-ISn" secondAttribute="bottom" id="a63-q8-YiC"/>
+                            <constraint firstItem="Ifh-gs-3pj" firstAttribute="centerY" secondItem="nRX-zd-fy8" secondAttribute="centerY" id="aJ0-yr-dT1"/>
                             <constraint firstItem="7IP-lK-KPS" firstAttribute="leading" secondItem="nRX-zd-fy8" secondAttribute="leading" id="r3s-fN-Ta8"/>
                             <constraint firstItem="sc4-eW-5k4" firstAttribute="top" secondItem="7IP-lK-KPS" secondAttribute="bottom" id="xJr-Ep-P9k"/>
                         </constraints>
@@ -107,14 +112,17 @@
                     <navigationItem key="navigationItem" title="SURVEYS" id="UZE-Zo-f0a">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="cae-0e-0Eh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bsA-fH-wpo">
-                                <rect key="frame" x="16" y="12" width="25" height="25"/>
+                                <rect key="frame" x="16" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="refresh"/>
+                                <connections>
+                                    <action selector="didTapRefresh:" destination="GIR-l9-hMT" eventType="touchUpInside" id="VIH-kK-yCN"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="GdU-3T-35P">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tc9-3f-Vyb">
-                                <rect key="frame" x="276" y="7" width="25" height="25"/>
+                                <rect key="frame" x="334" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="menu"/>
                             </button>
@@ -122,6 +130,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="HYh-hG-tG3" id="Rm5-gs-jYk"/>
+                        <outlet property="pageControl" destination="Ifh-gs-3pj" id="P2d-fe-Sd7"/>
                         <outlet property="tableView" destination="7IP-lK-KPS" id="bdQ-CC-lcD"/>
                     </connections>
                 </viewController>
@@ -129,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="1744.8" y="745.27736131934034"/>
         </scene>
-        <!--SurveyName-->
+        <!--THE SURVEY-->
         <scene sceneID="HhQ-L0-WD4">
             <objects>
                 <viewController id="xhy-m1-Jnc" sceneMemberID="viewController">
@@ -142,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="SurveyName" id="UJD-Zh-J65"/>
+                    <navigationItem key="navigationItem" title="THE SURVEY" id="UJD-Zh-J65"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QT-LC-bT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,7 +160,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sFl-jg-391">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Spo-1Q-psB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="Spo-1Q-psB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sE5-DZ-BE4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
