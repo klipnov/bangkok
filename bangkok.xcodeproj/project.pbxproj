@@ -22,6 +22,7 @@
 		E6EDD36C1F6AB05F00D99745 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */; };
 		E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36E1F6AC00500D99745 /* Alertable.swift */; };
 		E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */; };
+		E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E6EDD36E1F6AC00500D99745 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				E6EDD3701F6ACF8C00D99745 /* Extensions */,
 				E6EDD36D1F6ABFEC00D99745 /* Protocols */,
 				E642421B1F6AA1E9008D5A21 /* Networking */,
+				E6EDD3741F6ADDF500D99745 /* TableViewCells */,
 				E642421A1F6AA1C5008D5A21 /* ViewModels */,
 				E64242181F6AA1B3008D5A21 /* ViewControllers */,
 				E64242191F6AA1BD008D5A21 /* Storyboards */,
@@ -216,6 +219,14 @@
 				E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E6EDD3741F6ADDF500D99745 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */,
+			);
+			name = TableViewCells;
 			sourceTree = "<group>";
 		};
 		F510692BD763547CF6BE39CB /* Frameworks */ = {
@@ -519,6 +530,7 @@
 				E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */,
 				E64241E81F6AA0C9008D5A21 /* AppDelegate.swift in Sources */,
 				E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */,
+				E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
