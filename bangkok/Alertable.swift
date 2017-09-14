@@ -11,12 +11,18 @@ import UIKit
 protocol Alertable { }
 
 extension Alertable {
-    func showAlert(message: String) {
-        let topViewController = UIViewController()
-        let alertController = UIAlertController(title: "Network Error", message: message, preferredStyle: .alert)
+    
+    /**
+     Show alerts from anywhere
+     - Parameter title: Title of alert
+     - Parameter message: Message of alert
+     */
+    func showAlert(title: String, message: String) {
+        let topViewController = UIApplication.topViewController()
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         alertController.addAction(alertAction)
-        topViewController.present(alertController, animated: true, completion: nil)
+        topViewController?.present(alertController, animated: true, completion: nil)
     }
 }
