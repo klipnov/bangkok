@@ -39,13 +39,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell") as! CardTableViewCell
         
         let survey = viewModel.surveys[indexPath.row]
+        
+        cell.title.text = survey.title
+        
         if let imageUrlString = survey.imageURL {
             if let imageUrl = URL(string: imageUrlString) {
                 cell.backgroundImage.af_setImage(withURL: imageUrl)
             }
         }
         
-        return UITableViewCell()
+        return cell
     }
     
 }

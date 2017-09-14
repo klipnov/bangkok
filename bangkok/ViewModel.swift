@@ -29,6 +29,7 @@ class ViewModel {
                 return
             }
             self.processSurvey(json: json)
+            self.didUpdateSurvey?()
         }
     } 
     
@@ -38,7 +39,6 @@ class ViewModel {
     func refreshSurvey() {
         surveys.removeAll()
         getSurvey()
-        didUpdateSurvey?()
     }
     
     /**

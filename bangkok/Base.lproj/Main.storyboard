@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,14 +33,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="578.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="im6-Oq-Yn1">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="im6-Oq-Yn1">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="579"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NN-yF-Ss7">
+                                                    <rect key="frame" x="156" y="8" width="63" height="36"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2NN-yF-Ss7" firstAttribute="centerX" secondItem="7n0-Cz-poU" secondAttribute="centerX" id="QKs-aD-ULN"/>
+                                                <constraint firstAttribute="bottom" secondItem="im6-Oq-Yn1" secondAttribute="bottom" constant="-0.5" id="XFJ-QP-0OA"/>
+                                                <constraint firstItem="im6-Oq-Yn1" firstAttribute="leading" secondItem="7n0-Cz-poU" secondAttribute="leading" id="XXf-YY-3Mx"/>
+                                                <constraint firstItem="im6-Oq-Yn1" firstAttribute="top" secondItem="7n0-Cz-poU" secondAttribute="top" id="cY3-Ja-GaX"/>
+                                                <constraint firstAttribute="trailing" secondItem="im6-Oq-Yn1" secondAttribute="trailing" id="q2t-aw-CwI"/>
+                                                <constraint firstItem="2NN-yF-Ss7" firstAttribute="top" secondItem="7n0-Cz-poU" secondAttribute="topMargin" id="rE4-XL-7rG"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="backgroundImage" destination="im6-Oq-Yn1" id="9Mh-R4-VyX"/>
+                                            <outlet property="title" destination="2NN-yF-Ss7" id="n9m-Q7-dZu"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

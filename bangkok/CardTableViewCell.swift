@@ -10,8 +10,8 @@ import UIKit
 
 class CardTableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
