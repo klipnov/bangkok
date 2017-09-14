@@ -6,7 +6,10 @@ target 'bangkok' do
   use_frameworks!
 
   # Pods for bangkok
-
+  pod 'Alamofire'
+  pod 'AlamofireImage'
+  pod 'SwiftyJSON'
+  
   target 'bangkokTests' do
     inherit! :search_paths
     # Pods for testing
