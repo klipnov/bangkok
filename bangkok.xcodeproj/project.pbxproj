@@ -99,9 +99,11 @@
 		E64241E61F6AA0C9008D5A21 /* bangkok */ = {
 			isa = PBXGroup;
 			children = (
+				E642421B1F6AA1E9008D5A21 /* Networking */,
+				E642421A1F6AA1C5008D5A21 /* ViewModels */,
+				E64242191F6AA1BD008D5A21 /* Storyboards */,
+				E64242181F6AA1B3008D5A21 /* ViewControllers */,
 				E64241E71F6AA0C9008D5A21 /* AppDelegate.swift */,
-				E64241E91F6AA0C9008D5A21 /* ViewController.swift */,
-				E64241EB1F6AA0C9008D5A21 /* Main.storyboard */,
 				E64241F11F6AA0C9008D5A21 /* Assets.xcassets */,
 				E64241F31F6AA0C9008D5A21 /* LaunchScreen.storyboard */,
 				E64241F61F6AA0C9008D5A21 /* Info.plist */,
@@ -126,6 +128,36 @@
 				E642420C1F6AA0C9008D5A21 /* Info.plist */,
 			);
 			path = bangkokUITests;
+			sourceTree = "<group>";
+		};
+		E64242181F6AA1B3008D5A21 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E64241E91F6AA0C9008D5A21 /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E64242191F6AA1BD008D5A21 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E64241EB1F6AA0C9008D5A21 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		E642421A1F6AA1C5008D5A21 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		E642421B1F6AA1E9008D5A21 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
