@@ -23,6 +23,7 @@
 		E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36E1F6AC00500D99745 /* Alertable.swift */; };
 		E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */; };
 		E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */; };
+		E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E6EDD36E1F6AC00500D99745 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
+		E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */,
+				E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				E64241EA1F6AA0C9008D5A21 /* ViewController.swift in Sources */,
 				E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */,
 				E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */,
+				E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */,
 				E64241E81F6AA0C9008D5A21 /* AppDelegate.swift in Sources */,
 				E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */,
 				E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */,
