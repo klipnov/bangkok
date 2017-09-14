@@ -23,7 +23,7 @@ class BangkokNetwork: Alertable {
      
      - Parameter completion: Returns surveys
     */
-    func getSurvey(completion: @escaping (JSON?)->Void) {
+    func getSurveyJSON(completion: @escaping (JSON?)->Void) {
         
         let params = ["access_token": accessToken]
         
