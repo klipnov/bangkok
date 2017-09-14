@@ -131,8 +131,8 @@
 			children = (
 				E642421B1F6AA1E9008D5A21 /* Networking */,
 				E642421A1F6AA1C5008D5A21 /* ViewModels */,
-				E64242191F6AA1BD008D5A21 /* Storyboards */,
 				E64242181F6AA1B3008D5A21 /* ViewControllers */,
+				E64242191F6AA1BD008D5A21 /* Storyboards */,
 				E64241E71F6AA0C9008D5A21 /* AppDelegate.swift */,
 				E64241F11F6AA0C9008D5A21 /* Assets.xcassets */,
 				E64241F31F6AA0C9008D5A21 /* LaunchScreen.storyboard */,
@@ -745,6 +745,7 @@
 				E64242111F6AA0C9008D5A21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E64242121F6AA0C9008D5A21 /* Build configuration list for PBXNativeTarget "bangkokTests" */ = {
 			isa = XCConfigurationList;
@@ -753,6 +754,7 @@
 				E64242141F6AA0C9008D5A21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E64242151F6AA0C9008D5A21 /* Build configuration list for PBXNativeTarget "bangkokUITests" */ = {
 			isa = XCConfigurationList;
@@ -761,6 +763,7 @@
 				E64242171F6AA0C9008D5A21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
