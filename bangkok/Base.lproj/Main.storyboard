@@ -39,8 +39,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SURVEYS" id="UZE-Zo-f0a">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="wPM-W7-UZN"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="lFR-Ph-hdh"/>
+                        <barButtonItem key="leftBarButtonItem" image="refresh" id="wPM-W7-UZN">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="lFR-Ph-hdh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="7IP-lK-KPS" id="bdQ-CC-lcD"/>
@@ -89,4 +93,8 @@
             <point key="canvasLocation" x="805.60000000000002" y="746.17691154422789"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="32" height="32"/>
+        <image name="refresh" width="32" height="32"/>
+    </resources>
 </document>
