@@ -18,6 +18,6 @@ class CardTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        button.roundCorners()
     }
 }

@@ -13,12 +13,15 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     let viewModel = ViewModel()
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRect.zero)
+        self.view.addSubview(activityIndicator)
         viewModel.didUpdateSurvey = {
             self.tableView.reloadData()
+            self.activityIndicator.stopAnimating()
         }
     }
 }

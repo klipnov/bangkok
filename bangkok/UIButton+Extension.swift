@@ -11,7 +11,7 @@ import UIKit
 extension UIButton {
     
     func roundCorners() {
-        self.layer.cornerRadius = 7
+        self.layer.cornerRadius = self.frame.height/2
         self.layer.masksToBounds = true
     }
     

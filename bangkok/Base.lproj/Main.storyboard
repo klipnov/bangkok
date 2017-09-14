@@ -89,10 +89,16 @@
                                     <outlet property="delegate" destination="GIR-l9-hMT" id="ucz-RJ-Og8"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HYh-hG-tG3">
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="HYh-hG-tG3" firstAttribute="centerY" secondItem="nRX-zd-fy8" secondAttribute="centerY" id="AJM-gN-so0"/>
                             <constraint firstAttribute="trailing" secondItem="7IP-lK-KPS" secondAttribute="trailing" id="LQa-Gy-Hj0"/>
+                            <constraint firstItem="HYh-hG-tG3" firstAttribute="centerX" secondItem="nRX-zd-fy8" secondAttribute="centerX" id="N33-gp-JXS"/>
                             <constraint firstItem="7IP-lK-KPS" firstAttribute="top" secondItem="AIR-Dy-ISn" secondAttribute="bottom" id="a63-q8-YiC"/>
                             <constraint firstItem="7IP-lK-KPS" firstAttribute="leading" secondItem="nRX-zd-fy8" secondAttribute="leading" id="r3s-fN-Ta8"/>
                             <constraint firstItem="sc4-eW-5k4" firstAttribute="top" secondItem="7IP-lK-KPS" secondAttribute="bottom" id="xJr-Ep-P9k"/>
@@ -107,6 +113,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="HYh-hG-tG3" id="Rm5-gs-jYk"/>
                         <outlet property="tableView" destination="7IP-lK-KPS" id="bdQ-CC-lcD"/>
                     </connections>
                 </viewController>
