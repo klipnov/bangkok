@@ -35,7 +35,7 @@ class BangkokNetwork {
                 print("json array \(json.array?.count ?? 0)")
                 completion(json)
             case .failure(let error):
-                print("error \(error)")
+                let message = error.localizedDescription
             }
             
         }
