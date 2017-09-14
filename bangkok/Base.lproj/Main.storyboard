@@ -13,7 +13,7 @@
         <!--SURVEYS-->
         <scene sceneID="4DS-Cy-MHv">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GIR-l9-hMT" customClass="ViewController" customModule="bangkok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="surveyList" automaticallyAdjustsScrollViewInsets="NO" id="GIR-l9-hMT" customClass="ViewController" customModule="bangkok" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AIR-Dy-ISn"/>
                         <viewControllerLayoutGuide type="bottom" id="sc4-eW-5k4"/>
@@ -94,15 +94,15 @@
                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ifh-gs-3pj" customClass="BangkokPageControl" customModule="bangkok" customModuleProvider="target">
-                                <rect key="frame" x="320" y="315" width="39" height="37"/>
+                                <rect key="frame" x="336" y="315" width="39" height="37"/>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ifh-gs-3pj" secondAttribute="trailing" id="7lW-Kr-Nml"/>
                             <constraint firstItem="HYh-hG-tG3" firstAttribute="centerY" secondItem="nRX-zd-fy8" secondAttribute="centerY" id="AJM-gN-so0"/>
                             <constraint firstAttribute="trailing" secondItem="7IP-lK-KPS" secondAttribute="trailing" id="LQa-Gy-Hj0"/>
                             <constraint firstItem="HYh-hG-tG3" firstAttribute="centerX" secondItem="nRX-zd-fy8" secondAttribute="centerX" id="N33-gp-JXS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ifh-gs-3pj" secondAttribute="trailing" id="XH1-3B-afx"/>
                             <constraint firstItem="7IP-lK-KPS" firstAttribute="top" secondItem="AIR-Dy-ISn" secondAttribute="bottom" id="a63-q8-YiC"/>
                             <constraint firstItem="Ifh-gs-3pj" firstAttribute="centerY" secondItem="nRX-zd-fy8" secondAttribute="centerY" id="aJ0-yr-dT1"/>
                             <constraint firstItem="7IP-lK-KPS" firstAttribute="leading" secondItem="nRX-zd-fy8" secondAttribute="leading" id="r3s-fN-Ta8"/>
@@ -141,7 +141,7 @@
         <!--THE SURVEY-->
         <scene sceneID="HhQ-L0-WD4">
             <objects>
-                <viewController id="xhy-m1-Jnc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="theSurvey" id="xhy-m1-Jnc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="sDd-oU-TKT"/>
                         <viewControllerLayoutGuide type="bottom" id="2my-vO-bAu"/>
@@ -160,7 +160,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sFl-jg-391">
             <objects>
-                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="Spo-1Q-psB" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="Spo-1Q-psB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sE5-DZ-BE4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
