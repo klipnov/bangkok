@@ -33,6 +33,13 @@ class ViewController: UIViewController {
         viewModel.refreshSurvey()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        let survey = sender as! Survey
+        
+        destination.title = survey.title
+    }
+    
 }
 
 // MARK: - TableViewDelegate and Datasource
@@ -63,6 +70,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             if let imageUrl = URL(string: imageUrlString) {
                 cell.backgroundImage.af_setImage(withURL: imageUrl, placeholderImage: #imageLiteral(resourceName: "placeholder"), filter: nil, progress: nil, imageTransition: UIImageView.ImageTransition.crossDissolve(0.3), runImageTransitionIfCached: false, completion: nil)
             }
+        }
+        
+        cell.didTapSurveyButton = {
+            self.performSegue(withIdentifier: "viewSurvey", sender: survey)
         }
         
         return cell

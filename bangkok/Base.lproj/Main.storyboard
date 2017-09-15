@@ -49,17 +49,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-RJ-AD0">
-                                                    <rect key="frame" x="122" y="504" width="130" height="30"/>
+                                                    <rect key="frame" x="112" y="490" width="150" height="44"/>
                                                     <color key="backgroundColor" red="0.79317319389999996" green="0.1244887188" blue="0.17980846759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="130" id="N13-5L-eDk"/>
+                                                        <constraint firstAttribute="width" constant="150" id="N13-5L-eDk"/>
+                                                        <constraint firstAttribute="height" constant="44" id="Ndk-US-Ira"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <state key="normal" title="Take the survey">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="xhy-m1-Jnc" kind="show" identifier="viewSurvey" id="Di1-Cf-Srl"/>
+                                                        <action selector="didTapButton:" destination="us7-Ix-buI" eventType="touchUpInside" id="Osd-Ku-6mz"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -132,13 +133,14 @@
                         <outlet property="activityIndicator" destination="HYh-hG-tG3" id="Rm5-gs-jYk"/>
                         <outlet property="pageControl" destination="Ifh-gs-3pj" id="P2d-fe-Sd7"/>
                         <outlet property="tableView" destination="7IP-lK-KPS" id="bdQ-CC-lcD"/>
+                        <segue destination="xhy-m1-Jnc" kind="show" identifier="viewSurvey" id="BUt-So-78o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WlS-35-MqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744.8" y="745.27736131934034"/>
         </scene>
-        <!--THE SURVEY-->
+        <!--SURVEY TITLE-->
         <scene sceneID="HhQ-L0-WD4">
             <objects>
                 <viewController storyboardIdentifier="theSurvey" id="xhy-m1-Jnc" sceneMemberID="viewController">
@@ -149,9 +151,9 @@
                     <view key="view" contentMode="scaleToFill" id="4AE-7p-IJV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.068525850769999994" green="0.1115126535" blue="0.20695093270000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="THE SURVEY" id="UJD-Zh-J65"/>
+                    <navigationItem key="navigationItem" title="SURVEY TITLE" id="UJD-Zh-J65"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QT-LC-bT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

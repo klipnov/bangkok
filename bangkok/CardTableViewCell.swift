@@ -15,9 +15,15 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    var didTapSurveyButton: (()->Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         button.roundCorners()
+    }
+    
+    
+    @IBAction func didTapButton(_ sender: Any) {
+        didTapSurveyButton?()
     }
 }
