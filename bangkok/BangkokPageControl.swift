@@ -9,6 +9,7 @@
 import UIKit
 
 class BangkokPageControl: UIPageControl {
+    
     let activeImage:UIImage = #imageLiteral(resourceName: "dotInsideCircle")
     let inactiveImage:UIImage = #imageLiteral(resourceName: "circle")
     
@@ -34,6 +35,9 @@ class BangkokPageControl: UIPageControl {
         self.transform = CGAffineTransform(rotationAngle: angle)
     }
     
+    /**
+     Updates the subviews of pageControl and changes it to a UIImageView
+     */
     func updateDots() {
         var i = 0
         for (index,view) in self.subviews.enumerated() {
@@ -58,6 +62,9 @@ class BangkokPageControl: UIPageControl {
         }
     }
     
+    /**
+     Moves PageControl dots further apart
+     */
     func distanceViews(index:Int ,view: UIView) {
             let frame = view.frame
         
@@ -68,7 +75,9 @@ class BangkokPageControl: UIPageControl {
                 height: frame.height)
     }
     
-    
+    /**
+     Finds UIImageView in PageControl subviews
+    */
     fileprivate func imageForSubview(_ view:UIView) -> UIImageView? {
         var dot:UIImageView?
         

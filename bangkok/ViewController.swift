@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         self.activityIndicator.color = UIColor.white
         self.activityIndicator.startAnimating()
         viewModel.refreshSurvey()
-    } 
+    }
     
 }
 
