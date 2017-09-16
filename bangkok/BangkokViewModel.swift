@@ -1,5 +1,5 @@
 //
-//  ViewModel.swift
+//  BangkokViewModel.swift
 //  bangkok
 //
 //  Created by Shah Qays on 14/09/2017.
@@ -9,7 +9,8 @@
 import Foundation
 import SwiftyJSON
 
-class ViewModel {
+/// Gets and processes Survey data
+class BangkokViewModel {
     
     var surveys = [Survey]()
     var didUpdateSurvey: (() -> Void)?
@@ -19,9 +20,13 @@ class ViewModel {
     }
     
     /**
-     Returns an array of surveys
+     
+     Downloads surveys, process and update viewModel
+     
     */
+    
     func getSurvey() {
+        
         let bangkokNetwork = BangkokNetwork()
         
         bangkokNetwork.getSurveyJSON { (json) in
@@ -34,16 +39,24 @@ class ViewModel {
     } 
     
     /**
+     
      Clears the surveys and re-download again
+     
      */
+    
     func refreshSurvey() {
         surveys.removeAll()
         getSurvey()
     }
     
     /**
+     
      Process the survey to populate data
+     
+     - Parameter json: json to turn into Survey
+     
      */
+    
     func processSurvey(json: JSON) {
         
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext

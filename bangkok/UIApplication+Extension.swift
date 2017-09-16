@@ -9,6 +9,13 @@
 import UIKit
 
 extension UIApplication {
+    /**
+     
+     Gets the top most view controller currently showing
+ 
+     - Parameter base: optional
+     
+    */
     class func topViewController(base: UIViewController? = (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {
             return topViewController(base: nav.visibleViewController)

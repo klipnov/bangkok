@@ -11,7 +11,7 @@
 		95D087A98B1031C2C858F1E8 /* Pods_bangkok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524F73A203315A8DC7D91953 /* Pods_bangkok.framework */; };
 		D5DEED19C98607D3876A3AEC /* Pods_bangkokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F6694041103A2C4BE6DB1C4 /* Pods_bangkokTests.framework */; };
 		E64241E81F6AA0C9008D5A21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64241E71F6AA0C9008D5A21 /* AppDelegate.swift */; };
-		E64241EA1F6AA0C9008D5A21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64241E91F6AA0C9008D5A21 /* ViewController.swift */; };
+		E64241EA1F6AA0C9008D5A21 /* BangkokViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64241E91F6AA0C9008D5A21 /* BangkokViewController.swift */; };
 		E64241ED1F6AA0C9008D5A21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64241EB1F6AA0C9008D5A21 /* Main.storyboard */; };
 		E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E64241EE1F6AA0C9008D5A21 /* bangkok.xcdatamodeld */; };
 		E64241F21F6AA0C9008D5A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64241F11F6AA0C9008D5A21 /* Assets.xcassets */; };
@@ -19,7 +19,7 @@
 		E64242001F6AA0C9008D5A21 /* bangkokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64241FF1F6AA0C9008D5A21 /* bangkokTests.swift */; };
 		E642420B1F6AA0C9008D5A21 /* bangkokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */; };
 		E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */; };
-		E6EDD36C1F6AB05F00D99745 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */; };
+		E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */; };
 		E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36E1F6AC00500D99745 /* Alertable.swift */; };
 		E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */; };
 		E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */; };
@@ -58,7 +58,7 @@
 		CD4C45C8ACD3DBB952B7B618 /* Pods-bangkokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bangkokUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bangkokUITests/Pods-bangkokUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E64241E41F6AA0C9008D5A21 /* bangkok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bangkok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E64241E71F6AA0C9008D5A21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E64241E91F6AA0C9008D5A21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E64241E91F6AA0C9008D5A21 /* BangkokViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BangkokViewController.swift; sourceTree = "<group>"; };
 		E64241EC1F6AA0C9008D5A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E64241EF1F6AA0C9008D5A21 /* bangkok.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bangkok.xcdatamodel; sourceTree = "<group>"; };
 		E64241F11F6AA0C9008D5A21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,7 +71,7 @@
 		E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bangkokUITests.swift; sourceTree = "<group>"; };
 		E642420C1F6AA0C9008D5A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokNetwork.swift; sourceTree = "<group>"; };
-		E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokViewModel.swift; sourceTree = "<group>"; };
 		E6EDD36E1F6AC00500D99745 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 		E64242181F6AA1B3008D5A21 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				E64241E91F6AA0C9008D5A21 /* ViewController.swift */,
+				E64241E91F6AA0C9008D5A21 /* BangkokViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -202,7 +202,7 @@
 		E642421A1F6AA1C5008D5A21 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD36B1F6AB05F00D99745 /* ViewModel.swift */,
+				E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -561,8 +561,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */,
-				E6EDD36C1F6AB05F00D99745 /* ViewModel.swift in Sources */,
-				E64241EA1F6AA0C9008D5A21 /* ViewController.swift in Sources */,
+				E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */,
+				E64241EA1F6AA0C9008D5A21 /* BangkokViewController.swift in Sources */,
 				E6EDD37B1F6AF64900D99745 /* Appearances.swift in Sources */,
 				E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */,
 				E6EDD37E1F6B00A700D99745 /* BangkokPageControl.swift in Sources */,

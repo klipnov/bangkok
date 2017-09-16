@@ -11,15 +11,15 @@ import UIKit
 class CardTableViewCell: UITableViewCell {
 
     @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var cardTitle: UILabel!
+    @IBOutlet weak var cardDescription: UILabel!
+    @IBOutlet weak var cardButton: UIButton!
     
     var didTapSurveyButton: (()->Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        button.roundCorners()
+        cardButton.roundCorners()
     }
     
     

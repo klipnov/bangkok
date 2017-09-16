@@ -13,7 +13,7 @@
         <!--SURVEYS-->
         <scene sceneID="4DS-Cy-MHv">
             <objects>
-                <viewController storyboardIdentifier="surveyList" automaticallyAdjustsScrollViewInsets="NO" id="GIR-l9-hMT" customClass="ViewController" customModule="bangkok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="surveyList" automaticallyAdjustsScrollViewInsets="NO" id="GIR-l9-hMT" customClass="BangkokViewController" customModule="bangkok" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AIR-Dy-ISn"/>
                         <viewControllerLayoutGuide type="bottom" id="sc4-eW-5k4"/>
@@ -79,9 +79,9 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="backgroundImage" destination="im6-Oq-Yn1" id="9Mh-R4-VyX"/>
-                                            <outlet property="button" destination="Dwj-RJ-AD0" id="PPx-bs-zTw"/>
-                                            <outlet property="descriptionLabel" destination="cfw-ns-jqX" id="ask-TE-m4D"/>
-                                            <outlet property="title" destination="2NN-yF-Ss7" id="n9m-Q7-dZu"/>
+                                            <outlet property="cardButton" destination="Dwj-RJ-AD0" id="jOE-5O-L32"/>
+                                            <outlet property="cardDescription" destination="cfw-ns-jqX" id="PL7-9w-drz"/>
+                                            <outlet property="cardTitle" destination="2NN-yF-Ss7" id="YVI-fN-qK7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

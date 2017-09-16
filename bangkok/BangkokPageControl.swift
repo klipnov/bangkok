@@ -31,41 +31,61 @@ class BangkokPageControl: UIPageControl {
         self.currentPageIndicatorTintColor = UIColor.clear
         self.clipsToBounds = false
         
+        // rotate the page control 90 degress
         let angle = CGFloat(Double.pi/2)
         self.transform = CGAffineTransform(rotationAngle: angle)
     }
     
     /**
+     
      Updates the subviews of pageControl and changes it to a UIImageView
+     
      */
+    
     func updateDots() {
+        
         var i = 0
+        
         for (index,view) in self.subviews.enumerated() {
+            
             if let imageView = self.imageForSubview(view) {
+                
                 if i == self.currentPage {
                     imageView.image = self.activeImage
                 } else {
                     imageView.image = self.inactiveImage
                 }
+                
                 i = i + 1
+                
             } else {
+                
                 var dotImage = self.inactiveImage
+                
                 if i == self.currentPage {
                     dotImage = self.activeImage
                 }
+                
                 view.clipsToBounds = false
+                
                 let imageView = UIImageView(image: dotImage)
+                
                 view.addSubview(imageView)
                 distanceViews(index: index, view:imageView)
+                
                 i = i + 1
             }
         }
     }
     
     /**
+     
      Moves PageControl dots further apart
+     
      */
+    
     func distanceViews(index:Int ,view: UIView) {
+        
             let frame = view.frame
         
             view.frame = CGRect(
@@ -76,22 +96,29 @@ class BangkokPageControl: UIPageControl {
     }
     
     /**
+     
      Finds UIImageView in PageControl subviews
+     
     */
+    
     fileprivate func imageForSubview(_ view:UIView) -> UIImageView? {
+        
         var dot:UIImageView?
         
         if let dotImageView = view as? UIImageView {
+            
             dot = dotImageView
         } else {
+            
             for foundView in view.subviews {
+                
                 if let imageView = foundView as? UIImageView {
+                    
                     dot = imageView
                     break
                 }
             }
         }
-        
         return dot
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BangkokViewController.swift
 //  bangkok
 //
 //  Created by Shah Qays on 14/09/2017.
@@ -9,17 +9,20 @@
 import UIKit
 import AlamofireImage
 
-class ViewController: UIViewController {
-
+class BangkokViewController: UIViewController {
+    
+    let viewModel = BangkokViewModel()
     @IBOutlet weak var tableView: UITableView!
-    let viewModel = ViewModel()
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var pageControl: BangkokPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Hides the extra cells from showing
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        self.view.addSubview(activityIndicator)
+        
+        // Reload tableView and Update UI after survey updates
         viewModel.didUpdateSurvey = {
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
@@ -27,12 +30,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func didTapRefresh(_ sender: Any) {
-        self.activityIndicator.color = UIColor.white
-        self.activityIndicator.startAnimating()
-        viewModel.refreshSurvey()
-    }
-    
+    // Get the destination file and set selected title
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination
         let survey = sender as! Survey
@@ -40,11 +38,19 @@ class ViewController: UIViewController {
         destination.title = survey.title
     }
     
+    // Update UI and Reload upon refresh
+    @IBAction func didTapRefresh(_ sender: Any) {
+        activityIndicator.color = UIColor.white
+        activityIndicator.startAnimating()
+        
+        viewModel.refreshSurvey()
+    }
+    
 }
 
 // MARK: - TableViewDelegate and Datasource
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension BangkokViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -63,15 +69,17 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let survey = viewModel.surveys[indexPath.row]
         
-        cell.title.text = survey.title
-        cell.descriptionLabel.text = survey.surveyDescription
+        cell.cardTitle.text = survey.title
+        cell.cardDescription.text = survey.surveyDescription
         
+        // Check if survey imgURL is legit and download image
         if let imageUrlString = survey.imageURL {
             if let imageUrl = URL(string: imageUrlString) {
                 cell.backgroundImage.af_setImage(withURL: imageUrl, placeholderImage: #imageLiteral(resourceName: "placeholder"), filter: nil, progress: nil, imageTransition: UIImageView.ImageTransition.crossDissolve(0.3), runImageTransitionIfCached: false, completion: nil)
             }
         }
         
+        // View survey upon tapping a button
         cell.didTapSurveyButton = {
             self.performSegue(withIdentifier: "viewSurvey", sender: survey)
         }
@@ -83,8 +91,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
 // MARK: - ScrollView Delegate
 
-extension ViewController: UIScrollViewDelegate {
+extension BangkokViewController: UIScrollViewDelegate {
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        
+        //Update the page control indicator
         let pageNumber = round(scrollView.contentOffset.y / scrollView.frame.size.height)
         pageControl.currentPage = Int(pageNumber)
     }
