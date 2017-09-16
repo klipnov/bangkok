@@ -14,6 +14,7 @@ class Appearances {
      Change Navigation Bar Appearance to Bangkok UI
      
      */
+    
     static func navigationBar() {
         let navigationBarAppearance = UINavigationBar.appearance()
         

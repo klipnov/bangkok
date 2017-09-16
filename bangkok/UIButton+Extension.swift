@@ -15,6 +15,7 @@ extension UIButton {
      Rounds the corners of a button
      
      */
+    
     func roundCorners() {
         self.layer.cornerRadius = self.frame.height/2
         self.layer.masksToBounds = true

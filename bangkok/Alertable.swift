@@ -13,9 +13,11 @@ protocol Alertable { }
 extension Alertable {
     
     /**
+     
      Show alerts from anywhere
      - Parameter title: Title of alert
      - Parameter message: Message of alert
+     
      */
     func showAlert(title: String, message: String) {
         let topViewController = UIApplication.topViewController()
