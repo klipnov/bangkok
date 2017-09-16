@@ -78,7 +78,7 @@ class BangkokPageControl: UIPageControl {
                 view.addSubview(imageView)
                 
                 //increase the gap between dots
-                distanceViews(index: index, view:imageView)
+                increaseViewGap(index: index, view:imageView)
                 
             }
         }
@@ -93,12 +93,12 @@ class BangkokPageControl: UIPageControl {
      
      */
     
-    func distanceViews(index:Int ,view: UIView) {
+    func increaseViewGap(index:Int ,view: UIView) {
         
             let frame = view.frame
         
             view.frame = CGRect(
-                //add a 10 points on X
+                //add 10 points on X
                 x: CGFloat(Int(frame.origin.x) + (10 * index)),
                 y: frame.origin.y,
                 width: frame.width,
