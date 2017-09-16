@@ -111,7 +111,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SURVEYS" id="UZE-Zo-f0a">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="cae-0e-0Eh">
+                        <barButtonItem key="leftBarButtonItem" id="cae-0e-0Eh">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bsA-fH-wpo">
                                 <rect key="frame" x="16" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,7 +121,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="GdU-3T-35P">
+                        <barButtonItem key="rightBarButtonItem" id="GdU-3T-35P">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tc9-3f-Vyb">
                                 <rect key="frame" x="334" y="9" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
