@@ -32,8 +32,19 @@ class BangkokViewModelTests: XCTestCase {
         
         let survey = surveys.first
         
+        //test if survey is not nil
         XCTAssertTrue(survey != nil)
+        
+        //test if the contents are inserted properly
+        XCTAssertEqual(survey?.title, mockDataArray.first!["title"])
+        
+        //imageURL needs to have an "l" appended
+        var imageCoverURL = mockDataArray.first!["cover_image_url"]!
+        imageCoverURL.append("l")
+        XCTAssertEqual(survey?.imageURL, imageCoverURL)
+        XCTAssertEqual(survey?.surveyDescription, mockDataArray.first!["description"])
     }
+    
     
     func testProcessSurveyWithoutJSONArray() {
         
