@@ -93,7 +93,7 @@ class BangkokPageControl: UIPageControl {
      
      */
     
-    func increaseViewGap(index:Int ,view: UIView) {
+    private func increaseViewGap(index:Int ,view: UIView) {
         
             let frame = view.frame
         
@@ -115,7 +115,7 @@ class BangkokPageControl: UIPageControl {
      
     */
     
-    func imageForSubview(_ view:UIView) -> UIImageView? {
+    private func imageForSubview(_ view:UIView) -> UIImageView? {
         
         //if the view is an imageView
         if let dotImageView = view as? UIImageView {

@@ -13,39 +13,25 @@ class BangkokPageControlTests: XCTestCase {
     
     let bangkokPageControl = BangkokPageControl()
     
-    // Given two views at the same location and size
-    // after going through the function
-    // the secondView should be 10 points futher
-    // on the x-axis
-    func testIncreaseViewGap() {
+    func testBangkokPageControl() {
         
-        let firstView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        bangkokPageControl.awakeFromNib()
+        bangkokPageControl.numberOfPages = 5
+        bangkokPageControl.currentPage = 3
         
-        let secondView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
-        
-        bangkokPageControl.increaseViewGap(index: 0, view: firstView)
-        
-        bangkokPageControl.increaseViewGap(index: 1, view: secondView)
-        
-        XCTAssertEqual(firstView.frame.origin.x, 0)
-        XCTAssertEqual(secondView.frame.origin.x, 10)
-    }
-    
-    // Given a UIView, it should return nil if 
-    // there is no imageView in subviews
-    func testImageForSubview() {
-        
-        let view = UIView()
-        
-        let viewWithImageView = UIView()
-        viewWithImageView.addSubview(UIImageView(frame: CGRect.zero))
-        
-        let firstImageView = bangkokPageControl.imageForSubview(view)
-        
-        let secondImageView = bangkokPageControl.imageForSubview(viewWithImageView)
-        
-        XCTAssertNil(firstImageView)
-        XCTAssertTrue((secondImageView != nil))
+        for (index,view) in bangkokPageControl.subviews.enumerated() {
+            
+            for subview in view.subviews {
+                let point = CGFloat(index * 10)
+                
+                //page indicators must have 10 points gap on X axis between them
+                XCTAssertEqual(subview.frame.origin.x, point)
+                
+                //page indicators must be an imageView
+                XCTAssertTrue(subview is UIImageView)
+            }
+            
+        }
         
     }
     
