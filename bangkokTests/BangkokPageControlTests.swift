@@ -11,8 +11,22 @@ import XCTest
 
 class BangkokPageControlTests: XCTestCase {
     
-    //let bangkokPageControl = BangkokPageControl()
+    let bangkokPageControl = BangkokPageControl()
     
-    //func testDistanceViews
+    func testIncreaseViewGap() {
+        
+        let firstView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        
+        let secondView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
+        
+        bangkokPageControl.increaseViewGap(index: 0, view: firstView)
+        
+        bangkokPageControl.increaseViewGap(index: 1, view: secondView)
+        
+        XCTAssertEqual(firstView.frame.origin.x, 0)
+        XCTAssertEqual(secondView.frame.origin.x, 10)
+    }
+    
+    
     
 }
