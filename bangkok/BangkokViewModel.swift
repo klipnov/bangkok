@@ -14,6 +14,8 @@ class BangkokViewModel {
     
     var surveys = [Survey]()
     var didUpdateSurvey: (() -> Void)?
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
 
     init() {
         refreshSurvey()
@@ -33,7 +35,7 @@ class BangkokViewModel {
             guard let json = json else {
                 return
             }
-            self.processSurvey(json: json)
+            self.surveys = self.processSurvey(json: json)
             self.didUpdateSurvey?()
         }
     } 
@@ -53,13 +55,17 @@ class BangkokViewModel {
      
      Process the survey to populate data
      
-     - Parameter json: json to turn into Survey
+     - Parameter json: json to turn into Surveys
      
      */
     
-    func processSurvey(json: JSON) {
+    func processSurvey(json: JSON) -> [Survey] {
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        var surveys = [Survey]()
+        
+        guard (json.array != nil) else {
+            return surveys
+        }
         
         for json in json.array! {
             let survey = Survey(entity: Survey.entity(), insertInto: context)
@@ -70,5 +76,7 @@ class BangkokViewModel {
             
             surveys.append(survey)
         }
+        
+        return surveys
     }
 }

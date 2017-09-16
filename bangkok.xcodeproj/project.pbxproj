@@ -16,7 +16,6 @@
 		E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E64241EE1F6AA0C9008D5A21 /* bangkok.xcdatamodeld */; };
 		E64241F21F6AA0C9008D5A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64241F11F6AA0C9008D5A21 /* Assets.xcassets */; };
 		E64241F51F6AA0C9008D5A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64241F31F6AA0C9008D5A21 /* LaunchScreen.storyboard */; };
-		E64242001F6AA0C9008D5A21 /* bangkokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64241FF1F6AA0C9008D5A21 /* bangkokTests.swift */; };
 		E642420B1F6AA0C9008D5A21 /* bangkokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */; };
 		E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */; };
 		E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */; };
@@ -27,6 +26,7 @@
 		E6EDD37B1F6AF64900D99745 /* Appearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37A1F6AF64900D99745 /* Appearances.swift */; };
 		E6EDD37E1F6B00A700D99745 /* BangkokPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37D1F6B00A700D99745 /* BangkokPageControl.swift */; };
 		E6EDD3811F6B043C00D99745 /* PageControl.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD3801F6B043C00D99745 /* PageControl.xcassets */; };
+		E6F8D29D1F6D1E4F00E909D4 /* BangkokViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8D29C1F6D1E4F00E909D4 /* BangkokViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,6 @@
 		E64241F41F6AA0C9008D5A21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E64241F61F6AA0C9008D5A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64241FB1F6AA0C9008D5A21 /* bangkokTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bangkokTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E64241FF1F6AA0C9008D5A21 /* bangkokTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bangkokTests.swift; sourceTree = "<group>"; };
 		E64242011F6AA0C9008D5A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E64242061F6AA0C9008D5A21 /* bangkokUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bangkokUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bangkokUITests.swift; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		E6EDD37A1F6AF64900D99745 /* Appearances.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearances.swift; sourceTree = "<group>"; };
 		E6EDD37D1F6B00A700D99745 /* BangkokPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokPageControl.swift; sourceTree = "<group>"; };
 		E6EDD3801F6B043C00D99745 /* PageControl.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PageControl.xcassets; sourceTree = "<group>"; };
+		E6F8D29C1F6D1E4F00E909D4 /* BangkokViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +168,8 @@
 		E64241FE1F6AA0C9008D5A21 /* bangkokTests */ = {
 			isa = PBXGroup;
 			children = (
-				E64241FF1F6AA0C9008D5A21 /* bangkokTests.swift */,
 				E64242011F6AA0C9008D5A21 /* Info.plist */,
+				E6F8D29C1F6D1E4F00E909D4 /* BangkokViewModelTests.swift */,
 			);
 			path = bangkokTests;
 			sourceTree = "<group>";
@@ -358,6 +358,7 @@
 					E64241FA1F6AA0C9008D5A21 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PWCQR4WGGQ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = E64241E31F6AA0C9008D5A21;
 					};
@@ -578,7 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E64242001F6AA0C9008D5A21 /* bangkokTests.swift in Sources */,
+				E6F8D29D1F6D1E4F00E909D4 /* BangkokViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,11 +755,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PWCQR4WGGQ;
 				INFOPLIST_FILE = bangkokTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.work.bangkokTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bangkok.app/bangkok";
 			};
@@ -770,6 +773,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PWCQR4WGGQ;
 				INFOPLIST_FILE = bangkokTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
