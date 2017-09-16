@@ -8,6 +8,7 @@
 
 import UIKit
 
+// PageControl subclass for custom dots
 class BangkokPageControl: UIPageControl {
     
     let activeImage:UIImage = #imageLiteral(resourceName: "dotInsideCircle")
@@ -38,42 +39,47 @@ class BangkokPageControl: UIPageControl {
     
     /**
      
-     Updates the subviews of pageControl and changes it to a UIImageView
+     Updates the subviews of pageControl and assigns the currentPage activeImage
      
      */
     
     func updateDots() {
         
-        var i = 0
-        
+        // Enumerate through every pageControl subview to
+        // find or create an imageView
+        // also sets the active image according to the currentPage
         for (index,view) in self.subviews.enumerated() {
             
+            //if imageView is found set it to active or inactive image
             if let imageView = self.imageForSubview(view) {
                 
-                if i == self.currentPage {
+                //if current imageView sequence is equal currentPage
+                if index == self.currentPage {
+                    //set to activeImage
                     imageView.image = self.activeImage
                 } else {
+                    //set to inactiveImage
                     imageView.image = self.inactiveImage
                 }
                 
-                i = i + 1
-                
             } else {
-                
+                // else add an imageView to pageControl subviews
                 var dotImage = self.inactiveImage
                 
-                if i == self.currentPage {
+                // set active image if index equals current page
+                if index == self.currentPage {
                     dotImage = self.activeImage
                 }
                 
-                view.clipsToBounds = false
+                view.clipsToBounds = false // so that imageView assigned can be seen
                 
+                //assign imageView to current view
                 let imageView = UIImageView(image: dotImage)
-                
                 view.addSubview(imageView)
+                
+                //increase the gap between dots
                 distanceViews(index: index, view:imageView)
                 
-                i = i + 1
             }
         }
     }
@@ -89,6 +95,7 @@ class BangkokPageControl: UIPageControl {
             let frame = view.frame
         
             view.frame = CGRect(
+                //add a 10 points on X
                 x: CGFloat(Int(frame.origin.x) + (10 * index)),
                 y: frame.origin.y,
                 width: frame.width,
@@ -97,28 +104,33 @@ class BangkokPageControl: UIPageControl {
     
     /**
      
-     Finds UIImageView in PageControl subviews
+     Finds UIImageView in subviews
+     
+     - Parameter view: UIView
+     
+     - Returns: found imageView
      
     */
     
     fileprivate func imageForSubview(_ view:UIView) -> UIImageView? {
         
-        var dot:UIImageView?
-        
+        //if the view is an imageView
         if let dotImageView = view as? UIImageView {
-            
-            dot = dotImageView
+            // return the imageView
+            return dotImageView
         } else {
-            
+            // else try and find imageView in it's subviews
             for foundView in view.subviews {
-                
+                //if imageView is found
                 if let imageView = foundView as? UIImageView {
-                    
-                    dot = imageView
-                    break
+                    //return the imageView
+                    return imageView
                 }
             }
         }
-        return dot
+        
+        // return nil if everything fails
+        return nil
     }
+    
 }
