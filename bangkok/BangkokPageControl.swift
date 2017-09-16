@@ -115,7 +115,7 @@ class BangkokPageControl: UIPageControl {
      
     */
     
-    fileprivate func imageForSubview(_ view:UIView) -> UIImageView? {
+    func imageForSubview(_ view:UIView) -> UIImageView? {
         
         //if the view is an imageView
         if let dotImageView = view as? UIImageView {
