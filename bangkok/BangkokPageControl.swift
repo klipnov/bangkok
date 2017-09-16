@@ -86,7 +86,10 @@ class BangkokPageControl: UIPageControl {
     
     /**
      
-     Moves PageControl dots further apart
+     Moves PageControl dots further apart on X Axis
+     
+     - Parameter index: Index of the view
+     - Parameter view: View that needs to change it's X Axis
      
      */
     
