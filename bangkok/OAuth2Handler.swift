@@ -59,13 +59,20 @@ class OAuth2Handler: RequestRetrier {
             // create new token if there is no token
             if fetchedToken.count == 0 {
                 token = Token(entity: Token.entity(), insertInto: context)
-                token.accessToken = json["access_token"].string
-                token.expiresIn = Int64(json["expires_in"].intValue)
-                token.tokenType = json["token_type"].string
-                token.createdAt = Int64(json["created_at"].intValue)
             } else {
             // override the old token
-                token
+                token = fetchedToken.first
+            }
+            
+            token.accessToken = json["access_token"].string
+            token.expiresIn = Int64(json["expires_in"].intValue)
+            token.tokenType = json["token_type"].string
+            token.createdAt = Int64(json["created_at"].intValue)
+            
+            do {
+                try context.save()
+            } catch {
+                print("failed fetch", error)
             }
             
         } catch {
