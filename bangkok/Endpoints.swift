@@ -9,5 +9,6 @@
 import Foundation
 
 enum Endpoints: String {
+    case token = "https://nimbl3-survey-api.herokuapp.com/oauth/token"
     case surveys = "https://nimbl3-survey-api.herokuapp.com/surveys.json"
 }
