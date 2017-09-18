@@ -19,7 +19,6 @@
 		E642420B1F6AA0C9008D5A21 /* bangkokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */; };
 		E665FF871F70019B004C644C /* OAuth2Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E665FF861F70019B004C644C /* OAuth2Handler.swift */; };
 		E665FF891F701925004C644C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E665FF881F701925004C644C /* GlobalVariables.swift */; };
-		E688A50B1F6FE41100B09C46 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688A50A1F6FE41100B09C46 /* ConnectionManager.swift */; };
 		E688A50D1F6FE48B00B09C46 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688A50C1F6FE48B00B09C46 /* Endpoints.swift */; };
 		E6EDD36A1F6AB02F00D99745 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* RequestManager.swift */; };
 		E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */; };
@@ -76,7 +75,6 @@
 		E642420C1F6AA0C9008D5A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E665FF861F70019B004C644C /* OAuth2Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Handler.swift; sourceTree = "<group>"; };
 		E665FF881F701925004C644C /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
-		E688A50A1F6FE41100B09C46 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		E688A50C1F6FE48B00B09C46 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		E6EDD3691F6AB02F00D99745 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokViewModel.swift; sourceTree = "<group>"; };
@@ -223,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				E688A50C1F6FE48B00B09C46 /* Endpoints.swift */,
-				E688A50A1F6FE41100B09C46 /* ConnectionManager.swift */,
 				E6EDD3691F6AB02F00D99745 /* RequestManager.swift */,
 				E665FF861F70019B004C644C /* OAuth2Handler.swift */,
 			);
@@ -577,7 +574,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */,
-				E688A50B1F6FE41100B09C46 /* ConnectionManager.swift in Sources */,
 				E688A50D1F6FE48B00B09C46 /* Endpoints.swift in Sources */,
 				E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */,
 				E665FF891F701925004C644C /* GlobalVariables.swift in Sources */,

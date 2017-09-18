@@ -38,19 +38,6 @@ class RequestManager: Alertable {
                 self.showAlert(title: "Network Error", message: error.localizedDescription)
             }
         }
-        
-        /*Alamofire.request(Endpoints.surveys.rawValue, method: .get, parameters: params).validate().responseJSON { (response) in
-            
-            switch response.result {
-            case .success(let value):
-                let json = JSON(value)
-                completion(json)
-            case .failure(let error):
-                completion(nil)
-                self.showAlert(title: "Network Error", message: error.localizedDescription)
-            }
-            
-        }*/
     }
     
 }
