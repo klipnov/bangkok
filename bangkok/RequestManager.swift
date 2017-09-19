@@ -12,13 +12,12 @@ import SwiftyJSON
 
 class RequestManager: Alertable {
     
-    let connectionManager = ConnectionManager()
-    
     let sessionManager = SessionManager()
-    let oauthHandler = OAuth2Handler(accessToken: "1234")
+    let oauthManager = OAuth2Manager()
     
     init() {
-        sessionManager.retrier = oauthHandler
+        sessionManager.retrier = oauthManager
+        sessionManager.adapter = oauthManager
     }
     
     /**

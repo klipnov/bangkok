@@ -9,6 +9,7 @@ target 'bangkok' do
   pod 'Alamofire'
   pod 'AlamofireImage'
   pod 'SwiftyJSON'
+  pod 'KeychainSwift'
   
   target 'bangkokTests' do
     inherit! :search_paths

@@ -17,7 +17,7 @@
 		E64241F21F6AA0C9008D5A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64241F11F6AA0C9008D5A21 /* Assets.xcassets */; };
 		E64241F51F6AA0C9008D5A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64241F31F6AA0C9008D5A21 /* LaunchScreen.storyboard */; };
 		E642420B1F6AA0C9008D5A21 /* bangkokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */; };
-		E665FF871F70019B004C644C /* OAuth2Handler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E665FF861F70019B004C644C /* OAuth2Handler.swift */; };
+		E665FF871F70019B004C644C /* OAuth2Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E665FF861F70019B004C644C /* OAuth2Manager.swift */; };
 		E665FF891F701925004C644C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E665FF881F701925004C644C /* GlobalVariables.swift */; };
 		E688A50D1F6FE48B00B09C46 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688A50C1F6FE48B00B09C46 /* Endpoints.swift */; };
 		E6EDD36A1F6AB02F00D99745 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* RequestManager.swift */; };
@@ -73,7 +73,7 @@
 		E64242061F6AA0C9008D5A21 /* bangkokUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bangkokUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bangkokUITests.swift; sourceTree = "<group>"; };
 		E642420C1F6AA0C9008D5A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E665FF861F70019B004C644C /* OAuth2Handler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Handler.swift; sourceTree = "<group>"; };
+		E665FF861F70019B004C644C /* OAuth2Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Manager.swift; sourceTree = "<group>"; };
 		E665FF881F701925004C644C /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		E688A50C1F6FE48B00B09C46 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		E6EDD3691F6AB02F00D99745 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 			children = (
 				E688A50C1F6FE48B00B09C46 /* Endpoints.swift */,
 				E6EDD3691F6AB02F00D99745 /* RequestManager.swift */,
-				E665FF861F70019B004C644C /* OAuth2Handler.swift */,
+				E665FF861F70019B004C644C /* OAuth2Manager.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -580,7 +580,7 @@
 				E64241EA1F6AA0C9008D5A21 /* BangkokViewController.swift in Sources */,
 				E6EDD37B1F6AF64900D99745 /* Appearances.swift in Sources */,
 				E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */,
-				E665FF871F70019B004C644C /* OAuth2Handler.swift in Sources */,
+				E665FF871F70019B004C644C /* OAuth2Manager.swift in Sources */,
 				E6EDD37E1F6B00A700D99745 /* BangkokPageControl.swift in Sources */,
 				E6EDD36A1F6AB02F00D99745 /* RequestManager.swift in Sources */,
 				E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */,

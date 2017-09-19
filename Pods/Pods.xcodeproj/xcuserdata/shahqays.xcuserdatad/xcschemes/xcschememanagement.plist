@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KeychainSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-bangkok.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
+		<key>38ACA430605AFB4229712A18BDDF5086</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93626BEC6472090DB9334C998ECF6381</key>
+		<key>4259207FE56D893F85331CB71AFB615E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F291AA7AB2C6041A0668DE46BE6C7D63</key>
+		<key>F3FF665454D854D27E5FDC56172883CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
