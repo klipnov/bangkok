@@ -22,6 +22,8 @@ class BangkokViewController: UIViewController {
         // Hides the extra cells from showing
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
+        viewModel.refreshSurvey()
+        
         // Reload tableView and Update UI after survey updates
         viewModel.didUpdateSurvey = {
             self.tableView.reloadData()

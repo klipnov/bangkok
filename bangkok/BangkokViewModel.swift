@@ -17,9 +17,7 @@ class BangkokViewModel {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let requestManager = RequestManager()
 
-    init() {
-        refreshSurvey()
-    }
+    init() {}
     
     /**
      
