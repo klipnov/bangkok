@@ -12,6 +12,7 @@ import SwiftyJSON
 import CoreData
 import KeychainSwift
 
+//OAuth2Manager manages the access token
 class OAuth2Manager: RequestRetrier, RequestAdapter {
     
     private var accessToken = ""
