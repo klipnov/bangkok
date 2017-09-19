@@ -27,6 +27,8 @@ class RequestManager: Alertable {
     */
     func getSurveyJSON(completion: @escaping (JSON?)->Void) {
         
+        checkForRepeatedRequest(stringURL: Endpoints.surveys.rawValue)
+        
         sessionManager.request(Endpoints.surveys.rawValue).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
@@ -36,6 +38,25 @@ class RequestManager: Alertable {
                 completion(nil)
                 self.showAlert(title: "Network Error", message: error.localizedDescription)
             }
+        }
+        
+    }
+    
+    /**
+     Check for repeated calls
+     
+     - Parameter stringURL: url string to check
+    */
+    private func checkForRepeatedRequest(stringURL: String) {
+        sessionManager.session.getTasksWithCompletionHandler { (dataTask, uploadTask, downloadTask) in
+            
+            dataTask.forEach({ (dataTask) in
+                if dataTask.originalRequest?.urlRequest?.url?.absoluteString == stringURL {
+                    print("cancelling requests")
+                    dataTask.cancel()
+                }
+            })
+            
         }
     }
     
