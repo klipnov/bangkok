@@ -1,5 +1,5 @@
 //
-//  BangkokNetwork.swift
+//  RequestManager.swift
 //  bangkok
 //
 //  Created by Shah Qays on 14/09/2017.
@@ -10,13 +10,15 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-enum Endpoints: String {
-    case surveys = "https://nimbl3-survey-api.herokuapp.com/surveys.json"
-}
-
-class BangkokNetwork: Alertable {
+class RequestManager: Alertable {
     
-    let accessToken = "d9584af77d8c0d6622e2b3c554ed520b2ae64ba0721e52daa12d6eaa5e5cdd93"
+    let sessionManager = SessionManager()
+    let oauthManager = OAuth2Manager()
+    
+    init() {
+        sessionManager.retrier = oauthManager
+        sessionManager.adapter = oauthManager
+    }
     
     /**
      Get the survey JSON
@@ -25,10 +27,7 @@ class BangkokNetwork: Alertable {
     */
     func getSurveyJSON(completion: @escaping (JSON?)->Void) {
         
-        let params = ["access_token": accessToken]
-        
-        Alamofire.request(Endpoints.surveys.rawValue, method: .get, parameters: params).responseJSON { (response) in
-            
+        sessionManager.request(Endpoints.surveys.rawValue).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
@@ -37,7 +36,6 @@ class BangkokNetwork: Alertable {
                 completion(nil)
                 self.showAlert(title: "Network Error", message: error.localizedDescription)
             }
-            
         }
     }
     

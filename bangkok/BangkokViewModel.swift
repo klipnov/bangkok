@@ -29,9 +29,9 @@ class BangkokViewModel {
     
     func getSurvey() {
         
-        let bangkokNetwork = BangkokNetwork()
+        let requestManager = RequestManager()
         
-        bangkokNetwork.getSurveyJSON { (json) in
+        requestManager.getSurveyJSON { (json) in
             guard let json = json else {
                 return
             }
