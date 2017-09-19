@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class RequestManager: Alertable {
+class RequestManager {
     
     let sessionManager = SessionManager()
     let oauthManager = OAuth2Manager()
@@ -34,9 +34,8 @@ class RequestManager: Alertable {
             case .success(let value):
                 let json = JSON(value)
                 completion(json)
-            case .failure(let error):
+            case .failure( _):
                 completion(nil)
-                self.showAlert(title: "Network Error", message: error.localizedDescription)
             }
         }
         
