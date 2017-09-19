@@ -10,7 +10,7 @@ import UIKit
 
 protocol AlertDisplaying { }
 
-extension AlertDisplaying {
+extension AlertDisplaying where Self: UIViewController {
     
     /**
      
@@ -19,11 +19,11 @@ extension AlertDisplaying {
      - Parameter message: Message of alert
      
      */
-    func showAlert(title: String, message: String, viewController: UIViewController) {
+    func showAlert(title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         alertController.addAction(alertAction)
-        viewController.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 }

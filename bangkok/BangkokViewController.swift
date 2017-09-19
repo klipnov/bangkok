@@ -32,7 +32,7 @@ class BangkokViewController: UIViewController, AlertDisplaying {
         }
         
         viewModel.requestError = { (error) in
-            self.showAlert(title: "Network Error", message: error.localizedDescription, viewController: self)
+            self.showAlert(title: "Network Error", message: error.localizedDescription)
         }
     }
     
