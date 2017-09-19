@@ -1,5 +1,5 @@
 //
-//  BangkokPageControl.swift
+//  VerticalPageControl.swift
 //  bangkok
 //
 //  Created by Shah Qays on 15/09/2017.
@@ -9,7 +9,7 @@
 import UIKit
 
 // PageControl subclass for custom dots
-class BangkokPageControl: UIPageControl {
+class VerticalPageControl: UIPageControl {
     
     let activeImage:UIImage = #imageLiteral(resourceName: "dotInsideCircle")
     let inactiveImage:UIImage = #imageLiteral(resourceName: "circle")
