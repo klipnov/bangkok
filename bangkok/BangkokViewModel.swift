@@ -15,7 +15,7 @@ class BangkokViewModel {
     var surveys = [Survey]()
     var didUpdateSurvey: (() -> Void)?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    let requestManager = RequestManager()
 
     init() {
         refreshSurvey()
@@ -28,9 +28,6 @@ class BangkokViewModel {
     */
     
     func getSurvey() {
-        
-        let requestManager = RequestManager()
-        
         requestManager.getSurveyJSON { (json) in
             guard let json = json else {
                 return
