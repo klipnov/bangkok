@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 
-class RequestManager: Alertable {
+class RequestManager {
     
     let sessionManager = SessionManager()
     let oauthManager = OAuth2Manager()
@@ -25,17 +25,37 @@ class RequestManager: Alertable {
      
      - Parameter completion: Returns surveys
     */
-    func getSurveyJSON(completion: @escaping (JSON?)->Void) {
+    func getSurveyJSON(completion: @escaping (JSON?,Error?)->Void) {
+        
+        checkForRepeatedRequest(stringURL: Endpoints.surveys.rawValue)
         
         sessionManager.request(Endpoints.surveys.rawValue).validate().responseJSON { (response) in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                completion(json)
+                completion(json, nil)
             case .failure(let error):
-                completion(nil)
-                self.showAlert(title: "Network Error", message: error.localizedDescription)
+                completion(nil, error)
             }
+        }
+        
+    }
+    
+    /**
+     Check for repeated calls
+     
+     - Parameter stringURL: url string to check
+    */
+    private func checkForRepeatedRequest(stringURL: String) {
+        sessionManager.session.getTasksWithCompletionHandler { (dataTask, uploadTask, downloadTask) in
+            
+            dataTask.forEach({ (dataTask) in
+                if dataTask.originalRequest?.urlRequest?.url?.absoluteString == stringURL {
+                    print("cancelling requests")
+                    dataTask.cancel()
+                }
+            })
+            
         }
     }
     

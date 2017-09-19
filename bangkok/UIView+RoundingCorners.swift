@@ -1,5 +1,5 @@
 //
-//  UIButton+Extension.swift
+//  UIButton+RoundingCorners.swift
 //  bangkok
 //
 //  Created by Shah Qays on 15/09/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIButton {
+extension UIView {
     
     /**
      

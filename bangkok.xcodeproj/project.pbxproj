@@ -22,10 +22,9 @@
 		E688A50D1F6FE48B00B09C46 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688A50C1F6FE48B00B09C46 /* Endpoints.swift */; };
 		E6EDD36A1F6AB02F00D99745 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* RequestManager.swift */; };
 		E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */; };
-		E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36E1F6AC00500D99745 /* Alertable.swift */; };
-		E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */; };
+		E6EDD36F1F6AC00500D99745 /* AlertDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36E1F6AC00500D99745 /* AlertDisplaying.swift */; };
 		E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */; };
-		E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */; };
+		E6EDD3781F6AEDCB00D99745 /* UIView+RoundingCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3771F6AEDCB00D99745 /* UIView+RoundingCorners.swift */; };
 		E6EDD37B1F6AF64900D99745 /* AppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37A1F6AF64900D99745 /* AppearanceConfigurator.swift */; };
 		E6EDD37E1F6B00A700D99745 /* VerticalPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37D1F6B00A700D99745 /* VerticalPageControl.swift */; };
 		E6EDD3811F6B043C00D99745 /* PageControl.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD3801F6B043C00D99745 /* PageControl.xcassets */; };
@@ -78,10 +77,9 @@
 		E688A50C1F6FE48B00B09C46 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		E6EDD3691F6AB02F00D99745 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokViewModel.swift; sourceTree = "<group>"; };
-		E6EDD36E1F6AC00500D99745 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
-		E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		E6EDD36E1F6AC00500D99745 /* AlertDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDisplaying.swift; sourceTree = "<group>"; };
 		E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
-		E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		E6EDD3771F6AEDCB00D99745 /* UIView+RoundingCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RoundingCorners.swift"; sourceTree = "<group>"; };
 		E6EDD37A1F6AF64900D99745 /* AppearanceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceConfigurator.swift; sourceTree = "<group>"; };
 		E6EDD37D1F6B00A700D99745 /* VerticalPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalPageControl.swift; sourceTree = "<group>"; };
 		E6EDD3801F6B043C00D99745 /* PageControl.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PageControl.xcassets; sourceTree = "<group>"; };
@@ -230,7 +228,7 @@
 		E6EDD36D1F6ABFEC00D99745 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD36E1F6AC00500D99745 /* Alertable.swift */,
+				E6EDD36E1F6AC00500D99745 /* AlertDisplaying.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -238,8 +236,7 @@
 		E6EDD3701F6ACF8C00D99745 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */,
-				E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */,
+				E6EDD3771F6AEDCB00D99745 /* UIView+RoundingCorners.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -573,7 +570,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */,
+				E6EDD36F1F6AC00500D99745 /* AlertDisplaying.swift in Sources */,
 				E688A50D1F6FE48B00B09C46 /* Endpoints.swift in Sources */,
 				E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */,
 				E665FF891F701925004C644C /* GlobalVariables.swift in Sources */,
@@ -583,9 +580,8 @@
 				E665FF871F70019B004C644C /* OAuth2Manager.swift in Sources */,
 				E6EDD37E1F6B00A700D99745 /* VerticalPageControl.swift in Sources */,
 				E6EDD36A1F6AB02F00D99745 /* RequestManager.swift in Sources */,
-				E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */,
+				E6EDD3781F6AEDCB00D99745 /* UIView+RoundingCorners.swift in Sources */,
 				E64241E81F6AA0C9008D5A21 /* AppDelegate.swift in Sources */,
-				E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */,
 				E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
