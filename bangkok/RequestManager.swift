@@ -25,7 +25,7 @@ class RequestManager {
      
      - Parameter completion: Returns surveys
     */
-    func getSurveyJSON(completion: @escaping (JSON?)->Void) {
+    func getSurveyJSON(completion: @escaping (JSON?,Error?)->Void) {
         
         checkForRepeatedRequest(stringURL: Endpoints.surveys.rawValue)
         
@@ -33,9 +33,9 @@ class RequestManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                completion(json)
-            case .failure( _):
-                completion(nil)
+                completion(json, nil)
+            case .failure(let error):
+                completion(nil, error)
             }
         }
         

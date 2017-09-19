@@ -19,12 +19,11 @@ extension AlertDisplaying {
      - Parameter message: Message of alert
      
      */
-    func showAlert(title: String, message: String) {
-        let topViewController = UIApplication.topViewController()
+    func showAlert(title: String, message: String, viewController: UIViewController) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         alertController.addAction(alertAction)
-        topViewController?.present(alertController, animated: true, completion: nil)
+        viewController.present(alertController, animated: true, completion: nil)
     }
 }

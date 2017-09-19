@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class BangkokViewController: UIViewController {
+class BangkokViewController: UIViewController, AlertDisplaying {
     
     let viewModel = BangkokViewModel()
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +29,10 @@ class BangkokViewController: UIViewController {
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
             self.pageControl.numberOfPages = self.viewModel.surveys.count
+        }
+        
+        viewModel.requestError = { (error) in
+            self.showAlert(title: "Network Error", message: error.localizedDescription, viewController: self)
         }
     }
     
