@@ -10,17 +10,16 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import CoreData
+import KeychainSwift
 
 class OAuth2Manager: RequestRetrier, RequestAdapter {
     
-    private let accessToken: String
+    private var accessToken = ""
+    private let keychain = KeychainSwift()
+    private let accessTokenKey = "accessToken"
     
     init() {
-        accessToken = "b29feeaa1bc105c8204099bd21311088b1c7e28b1d3f421fbe366304715e69f6"
-    }
-    
-    private func initializeToken() {
-        
+        accessToken = getAccessToken()
     }
     
     func adapt(_ urlRequest: URLRequest) throws -> URLRequest {
@@ -33,13 +32,17 @@ class OAuth2Manager: RequestRetrier, RequestAdapter {
         
         if let response = request.task?.response as? HTTPURLResponse, response.statusCode == 401 {
             print("failed to get authorization")
-            getNewToken(completion: { (token) in
-                print("new token \(token)")
+            getNewToken(completion: { (success) in
+                if success {
+                    completion(true, 0.0)
+                } else {
+                    completion(false, 1.0)
+                }
             })
         }
     }
     
-    private func getNewToken(completion: @escaping (String?) -> Void) {
+    private func getNewToken(completion: @escaping (Bool) -> Void) {
         let params = ["grant_type": "password",
                       "username": "carlos@nimbl3.com",
                       "password": "antikera"]
@@ -49,22 +52,30 @@ class OAuth2Manager: RequestRetrier, RequestAdapter {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let token = self.saveRefreshedToken(json: json)
-                completion(token)
+                self.saveRefreshedToken(json: json)
+                completion(true)
                 break
             case .failure:
-                completion(nil)
+                completion(false)
                 break
             }
         }
     }
     
-    private func saveRefreshedToken(json: JSON) -> String? {
-        return "a new token"
+    private func saveRefreshedToken(json: JSON) {
+        if let accessTokenString = json["access_token"].string {
+          keychain.set(accessTokenString, forKey: accessTokenKey)
+          accessToken = accessTokenString
+        }
     }
     
-    private func getAccessToken() -> String? {
-        return "current token"
+    private func getAccessToken() -> String {
+        
+        if let accessToken = keychain.get(accessTokenKey) {
+            return accessToken
+        }
+        
+        return ""
     }
 
     
