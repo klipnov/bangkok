@@ -8,14 +8,14 @@
 
 import UIKit
 
-class Appearances {
+class AppearanceConfigurator {
     /**
      
      Change Navigation Bar Appearance to Bangkok UI
      
      */
     
-    static func navigationBar() {
+    static func adjustNavigationBarAppearance() {
         let navigationBarAppearance = UINavigationBar.appearance()
         
         navigationBarAppearance.barTintColor = UIColor.init(red: 17.0/255.0, green: 28.0/255.0, blue: 53.0/255.0, alpha: 1.0)

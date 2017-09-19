@@ -17,14 +17,16 @@
 		E64241F21F6AA0C9008D5A21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E64241F11F6AA0C9008D5A21 /* Assets.xcassets */; };
 		E64241F51F6AA0C9008D5A21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E64241F31F6AA0C9008D5A21 /* LaunchScreen.storyboard */; };
 		E642420B1F6AA0C9008D5A21 /* bangkokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */; };
-		E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */; };
+		E665FF871F70019B004C644C /* OAuth2Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E665FF861F70019B004C644C /* OAuth2Manager.swift */; };
+		E665FF891F701925004C644C /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E665FF881F701925004C644C /* GlobalVariables.swift */; };
+		E688A50D1F6FE48B00B09C46 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E688A50C1F6FE48B00B09C46 /* Endpoints.swift */; };
+		E6EDD36A1F6AB02F00D99745 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3691F6AB02F00D99745 /* RequestManager.swift */; };
 		E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */; };
-		E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36E1F6AC00500D99745 /* Alertable.swift */; };
-		E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */; };
+		E6EDD36F1F6AC00500D99745 /* AlertDisplaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD36E1F6AC00500D99745 /* AlertDisplaying.swift */; };
 		E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */; };
-		E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */; };
-		E6EDD37B1F6AF64900D99745 /* Appearances.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37A1F6AF64900D99745 /* Appearances.swift */; };
-		E6EDD37E1F6B00A700D99745 /* BangkokPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37D1F6B00A700D99745 /* BangkokPageControl.swift */; };
+		E6EDD3781F6AEDCB00D99745 /* UIView+RoundingCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD3771F6AEDCB00D99745 /* UIView+RoundingCorners.swift */; };
+		E6EDD37B1F6AF64900D99745 /* AppearanceConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37A1F6AF64900D99745 /* AppearanceConfigurator.swift */; };
+		E6EDD37E1F6B00A700D99745 /* VerticalPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EDD37D1F6B00A700D99745 /* VerticalPageControl.swift */; };
 		E6EDD3811F6B043C00D99745 /* PageControl.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6EDD3801F6B043C00D99745 /* PageControl.xcassets */; };
 		E6EFE7D71F6D6C2D00950006 /* BangkokPageControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6EFE7D61F6D6C2D00950006 /* BangkokPageControlTests.swift */; };
 		E6F8D29D1F6D1E4F00E909D4 /* BangkokViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F8D29C1F6D1E4F00E909D4 /* BangkokViewModelTests.swift */; };
@@ -70,14 +72,16 @@
 		E64242061F6AA0C9008D5A21 /* bangkokUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bangkokUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E642420A1F6AA0C9008D5A21 /* bangkokUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bangkokUITests.swift; sourceTree = "<group>"; };
 		E642420C1F6AA0C9008D5A21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokNetwork.swift; sourceTree = "<group>"; };
+		E665FF861F70019B004C644C /* OAuth2Manager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Manager.swift; sourceTree = "<group>"; };
+		E665FF881F701925004C644C /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		E688A50C1F6FE48B00B09C46 /* Endpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		E6EDD3691F6AB02F00D99745 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 		E6EDD36B1F6AB05F00D99745 /* BangkokViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokViewModel.swift; sourceTree = "<group>"; };
-		E6EDD36E1F6AC00500D99745 /* Alertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
-		E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		E6EDD36E1F6AC00500D99745 /* AlertDisplaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertDisplaying.swift; sourceTree = "<group>"; };
 		E6EDD3751F6ADE9000D99745 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
-		E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		E6EDD37A1F6AF64900D99745 /* Appearances.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearances.swift; sourceTree = "<group>"; };
-		E6EDD37D1F6B00A700D99745 /* BangkokPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokPageControl.swift; sourceTree = "<group>"; };
+		E6EDD3771F6AEDCB00D99745 /* UIView+RoundingCorners.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RoundingCorners.swift"; sourceTree = "<group>"; };
+		E6EDD37A1F6AF64900D99745 /* AppearanceConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceConfigurator.swift; sourceTree = "<group>"; };
+		E6EDD37D1F6B00A700D99745 /* VerticalPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalPageControl.swift; sourceTree = "<group>"; };
 		E6EDD3801F6B043C00D99745 /* PageControl.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PageControl.xcassets; sourceTree = "<group>"; };
 		E6EFE7D61F6D6C2D00950006 /* BangkokPageControlTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokPageControlTests.swift; sourceTree = "<group>"; };
 		E6F8D29C1F6D1E4F00E909D4 /* BangkokViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BangkokViewModelTests.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				E64241F31F6AA0C9008D5A21 /* LaunchScreen.storyboard */,
 				E64241F61F6AA0C9008D5A21 /* Info.plist */,
 				E64241EE1F6AA0C9008D5A21 /* bangkok.xcdatamodeld */,
+				E665FF881F701925004C644C /* GlobalVariables.swift */,
 			);
 			path = bangkok;
 			sourceTree = "<group>";
@@ -213,7 +218,9 @@
 		E642421B1F6AA1E9008D5A21 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD3691F6AB02F00D99745 /* BangkokNetwork.swift */,
+				E688A50C1F6FE48B00B09C46 /* Endpoints.swift */,
+				E6EDD3691F6AB02F00D99745 /* RequestManager.swift */,
+				E665FF861F70019B004C644C /* OAuth2Manager.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -221,7 +228,7 @@
 		E6EDD36D1F6ABFEC00D99745 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD36E1F6AC00500D99745 /* Alertable.swift */,
+				E6EDD36E1F6AC00500D99745 /* AlertDisplaying.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -229,8 +236,7 @@
 		E6EDD3701F6ACF8C00D99745 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD3711F6ACFC800D99745 /* UIApplication+Extension.swift */,
-				E6EDD3771F6AEDCB00D99745 /* UIButton+Extension.swift */,
+				E6EDD3771F6AEDCB00D99745 /* UIView+RoundingCorners.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -246,7 +252,7 @@
 		E6EDD3791F6AF58800D99745 /* Appearance */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD37A1F6AF64900D99745 /* Appearances.swift */,
+				E6EDD37A1F6AF64900D99745 /* AppearanceConfigurator.swift */,
 			);
 			name = Appearance;
 			sourceTree = "<group>";
@@ -254,7 +260,7 @@
 		E6EDD37C1F6B007E00D99745 /* UI Subclass */ = {
 			isa = PBXGroup;
 			children = (
-				E6EDD37D1F6B00A700D99745 /* BangkokPageControl.swift */,
+				E6EDD37D1F6B00A700D99745 /* VerticalPageControl.swift */,
 			);
 			name = "UI Subclass";
 			sourceTree = "<group>";
@@ -564,16 +570,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6EDD36F1F6AC00500D99745 /* Alertable.swift in Sources */,
+				E6EDD36F1F6AC00500D99745 /* AlertDisplaying.swift in Sources */,
+				E688A50D1F6FE48B00B09C46 /* Endpoints.swift in Sources */,
 				E6EDD36C1F6AB05F00D99745 /* BangkokViewModel.swift in Sources */,
+				E665FF891F701925004C644C /* GlobalVariables.swift in Sources */,
 				E64241EA1F6AA0C9008D5A21 /* BangkokViewController.swift in Sources */,
-				E6EDD37B1F6AF64900D99745 /* Appearances.swift in Sources */,
+				E6EDD37B1F6AF64900D99745 /* AppearanceConfigurator.swift in Sources */,
 				E64241F01F6AA0C9008D5A21 /* bangkok.xcdatamodeld in Sources */,
-				E6EDD37E1F6B00A700D99745 /* BangkokPageControl.swift in Sources */,
-				E6EDD36A1F6AB02F00D99745 /* BangkokNetwork.swift in Sources */,
-				E6EDD3781F6AEDCB00D99745 /* UIButton+Extension.swift in Sources */,
+				E665FF871F70019B004C644C /* OAuth2Manager.swift in Sources */,
+				E6EDD37E1F6B00A700D99745 /* VerticalPageControl.swift in Sources */,
+				E6EDD36A1F6AB02F00D99745 /* RequestManager.swift in Sources */,
+				E6EDD3781F6AEDCB00D99745 /* UIView+RoundingCorners.swift in Sources */,
 				E64241E81F6AA0C9008D5A21 /* AppDelegate.swift in Sources */,
-				E6EDD3721F6ACFC800D99745 /* UIApplication+Extension.swift in Sources */,
 				E6EDD3761F6ADE9000D99745 /* CardTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

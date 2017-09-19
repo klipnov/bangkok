@@ -14,12 +14,11 @@ class BangkokViewModel {
     
     var surveys = [Survey]()
     var didUpdateSurvey: (() -> Void)?
+    var requestError:((Error)->Void)?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    let requestManager = RequestManager()
 
-
-    init() {
-        refreshSurvey()
-    }
+    init() {}
     
     /**
      
@@ -28,11 +27,11 @@ class BangkokViewModel {
     */
     
     func getSurvey() {
-        
-        let bangkokNetwork = BangkokNetwork()
-        
-        bangkokNetwork.getSurveyJSON { (json) in
+        requestManager.getSurveyJSON { (json,error) in
             guard let json = json else {
+                if let error = error {
+                    self.requestError?(error)
+                }
                 return
             }
             self.surveys = self.processSurvey(json: json)
@@ -59,7 +58,7 @@ class BangkokViewModel {
      
      */
     
-    func processSurvey(json: JSON) -> [Survey] {
+    private func processSurvey(json: JSON) -> [Survey] {
         
         var surveys = [Survey]()
         

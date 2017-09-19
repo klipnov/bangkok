@@ -9,12 +9,12 @@
 import UIKit
 import AlamofireImage
 
-class BangkokViewController: UIViewController {
+class BangkokViewController: UIViewController, AlertDisplaying {
     
     let viewModel = BangkokViewModel()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var pageControl: BangkokPageControl!
+    @IBOutlet weak var pageControl: VerticalPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +22,17 @@ class BangkokViewController: UIViewController {
         // Hides the extra cells from showing
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
+        viewModel.refreshSurvey()
+        
         // Reload tableView and Update UI after survey updates
         viewModel.didUpdateSurvey = {
             self.tableView.reloadData()
             self.activityIndicator.stopAnimating()
             self.pageControl.numberOfPages = self.viewModel.surveys.count
+        }
+        
+        viewModel.requestError = { (error) in
+            self.showAlert(title: "Network Error", message: error.localizedDescription)
         }
     }
     

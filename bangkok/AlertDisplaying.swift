@@ -1,5 +1,5 @@
 //
-//  Alertable.swift
+//  AlertDisplaying.swift
 //  bangkok
 //
 //  Created by Shah Qays on 14/09/2017.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol Alertable { }
+protocol AlertDisplaying { }
 
-extension Alertable {
+extension AlertDisplaying where Self: UIViewController {
     
     /**
      
@@ -20,11 +20,10 @@ extension Alertable {
      
      */
     func showAlert(title: String, message: String) {
-        let topViewController = UIApplication.topViewController()
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         
         alertController.addAction(alertAction)
-        topViewController?.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
