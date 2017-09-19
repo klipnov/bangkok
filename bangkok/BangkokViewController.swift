@@ -14,7 +14,7 @@ class BangkokViewController: UIViewController {
     let viewModel = BangkokViewModel()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var pageControl: BangkokPageControl!
+    @IBOutlet weak var pageControl: VerticalPageControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
