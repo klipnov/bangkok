@@ -1,5 +1,5 @@
 //
-//  Alertable.swift
+//  AlertDisplaying.swift
 //  bangkok
 //
 //  Created by Shah Qays on 14/09/2017.
@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol Alertable { }
+protocol AlertDisplaying { }
 
-extension Alertable {
+extension AlertDisplaying {
     
     /**
      
