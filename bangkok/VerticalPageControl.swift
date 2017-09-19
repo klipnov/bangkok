@@ -43,7 +43,7 @@ class VerticalPageControl: UIPageControl {
      
      */
     
-    func updateDots() {
+    private func updateDots() {
         
         // Enumerate through every pageControl subview to
         // find or create an imageView

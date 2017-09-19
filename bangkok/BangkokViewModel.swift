@@ -59,7 +59,7 @@ class BangkokViewModel {
      
      */
     
-    func processSurvey(json: JSON) -> [Survey] {
+    private func processSurvey(json: JSON) -> [Survey] {
         
         var surveys = [Survey]()
         
